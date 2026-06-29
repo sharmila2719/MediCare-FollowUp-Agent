@@ -1,0 +1,212 @@
+﻿================================================================================
+  MediCare Patient Follow-Up Agent — Demo Output
+  Generated : 29-06-2026 16:26:05
+  Dataset   : patient_data.csv (100 patients)
+  Repo      : https://github.com/sharmila2719/MediCare-FollowUp-Agent
+================================================================================
+
+[90mΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ[0m
+[36m[1m  ≡ƒÅÑ  MediCare Patient Follow-Up Agent ΓÇö LIVE DEMO[0m[0m
+[90m      Agentic AI | ReAct Tool-Chaining | GPT-4o-mini + OpenAI Function Calling[0m
+[90mΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ[0m
+[90m  Dataset: patient_data.csv  |  100 patients  |  15 missed appointments[0m
+
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[35m[1m  ≡ƒôè TASK 1 ΓÇö Dataset Overview (EDA)[0m[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[1m  Top Diagnoses:[0m
+  [36mHypertension                       [0m [34mΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê[0m 25
+  [36mHeart Failure                      [0m [34mΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê[0m 23
+  [36mType 2 Diabetes                    [0m [34mΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê[0m 17
+  [36mAnemia                             [0m [34mΓûêΓûêΓûêΓûêΓûêΓûêΓûê[0m 14
+  [36mCOPD                               [0m [34mΓûêΓûêΓûêΓûêΓûêΓûêΓûê[0m 13
+  [36mHypothyroidism                     [0m [34mΓûêΓûêΓûêΓûêΓûê[0m 9
+
+  [1mAvg days since last visit:[0m [33m211[0m
+  [1mPatients with BP ΓëÑ 160:[0m    [31m28[0m
+  [1mPatients with SpO2 < 94%:[0m  [31m42[0m
+  [1mMissed last appointment:[0m    [38;5;208m15[0m
+
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[35m[1m  ≡ƒ¢á∩╕Å  TASK 2 ΓÇö Agent Tools Registered[0m[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+  [32mΓ£ô[0m  [36m[1mget_patient_data                      [0m[0m [90mFetch complete patient record by ID[0m
+  [32mΓ£ô[0m  [36m[1mflag_clinical_risk                    [0m[0m [90mEvaluate 10 clinical thresholds ΓåÆ LOW/MEDIUM/HIGH[0m
+  [32mΓ£ô[0m  [36m[1mgenerate_care_actions                 [0m[0m [90mMap risk flags to prioritised care actions[0m
+  [32mΓ£ô[0m  [36m[1mget_missed_appointment_patients       [0m[0m [90mReturn all patients who missed last appointment[0m
+
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[35m[1m  ≡ƒöä TASK 3 ΓÇö Agentic Loop[0m[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[90m  LLM autonomously chains: get_patient_data ΓåÆ flag_clinical_risk ΓåÆ generate_care_actions[0m
+
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[35m[1m  ≡ƒö¼ TASK 4 ΓÇö Single Patient Analysis[0m[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+
+  [33m[1mΓû╢ Patient P0008[0m[0m  [90mHeart Failure ΓÇö BNP=1100.1 pg/mL[0m
+
+[44m[97m ≡ƒñû AGENT [0m[0m  [1mAssess patient P0008 and generate prioritised care actions[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[90m  System: MediCare Follow-Up Agent | GPT-4o-mini | tool_choice=auto[0m
+[90m┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖[0m
+  [90m[Step 1][0m [38;5;208m≡ƒöº Calling:[0m [36m[1mget_patient_data[0m[0m  [90m{"patient_id":"P0008"}[0m
+[90m           Γå│ result received (481 bytes)[0m
+  [90m[Step 2][0m [38;5;208m≡ƒöº Calling:[0m [36m[1mflag_clinical_risk[0m[0m  [90m{"patient_id":"P0008"}[0m
+[90m           Γå│ result received (277 bytes)[0m
+  [90m[Step 3][0m [38;5;208m≡ƒöº Calling:[0m [36m[1mgenerate_care_actions[0m[0m  [90m{"patient_id":"P0008"}[0m
+[90m           Γå│ result received (445 bytes)[0m
+
+  [32m[1mΓ£à Agent completed in[0m[0m 3 steps.
+
+  [1mPatient:[0m  [97mDeepa Krishnan[0m  [90m|[0m  ID: P0008  [90m|[0m  Age: 45
+  [1mDiagnosis:[0m [36mHeart Failure[0m
+  [1mRisk Level:[0m [31m[1m≡ƒö┤ HIGH  [0m[0m  [90m(3 flags)[0m 
+  [1mFlags:[0m
+    [38;5;208mΓÜá[0m  BNP 1100.1 pg/mL (>400) ΓÇö elevated heart failure marker
+    [38;5;208mΓÜá[0m  SpO2 92% ΓÇö low oxygen saturation
+    [38;5;208mΓÜá[0m  Last visit 204 days ago ΓÇö overdue follow-up
+  [1mRecommended Actions:[0m
+    [32m1.[0m ≡ƒÜ¿ URGENT: Contact patient within 24 hours
+    [32m2.[0m Heart Failure: Cardiology referral; review Furosemide dosage
+    [32m3.[0m Respiratory: Arrange pulse oximetry; consider supplemental O2
+    [32m4.[0m Access: Schedule urgent catch-up appointment
+    [32m5.[0m Medication: Review adherence to Furosemide 40mg
+
+  [33m[1mΓû╢ Patient P0028[0m[0m  [90mDepression ΓÇö PHQ-9=26.6/27 (Critical)[0m
+
+[44m[97m ≡ƒñû AGENT [0m[0m  [1mAssess patient P0028 and generate prioritised care actions[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[90m  System: MediCare Follow-Up Agent | GPT-4o-mini | tool_choice=auto[0m
+[90m┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖[0m
+  [90m[Step 1][0m [38;5;208m≡ƒöº Calling:[0m [36m[1mget_patient_data[0m[0m  [90m{"patient_id":"P0028"}[0m
+[90m           Γå│ result received (477 bytes)[0m
+  [90m[Step 2][0m [38;5;208m≡ƒöº Calling:[0m [36m[1mflag_clinical_risk[0m[0m  [90m{"patient_id":"P0028"}[0m
+[90m           Γå│ result received (272 bytes)[0m
+  [90m[Step 3][0m [38;5;208m≡ƒöº Calling:[0m [36m[1mgenerate_care_actions[0m[0m  [90m{"patient_id":"P0028"}[0m
+[90m           Γå│ result received (452 bytes)[0m
+
+  [32m[1mΓ£à Agent completed in[0m[0m 3 steps.
+
+  [1mPatient:[0m  [97mSwati Pandey[0m  [90m|[0m  ID: P0028  [90m|[0m  Age: 81
+  [1mDiagnosis:[0m [36mDepression[0m
+  [1mRisk Level:[0m [31m[1m≡ƒö┤ HIGH  [0m[0m  [90m(3 flags)[0m 
+  [1mFlags:[0m
+    [38;5;208mΓÜá[0m  PHQ-9 26.6/27 (>14) ΓÇö moderate-to-severe depression
+    [38;5;208mΓÜá[0m  Vitals systolic BP 175 mmHg ΓÇö severely elevated
+    [38;5;208mΓÜá[0m  SpO2 91% ΓÇö low oxygen saturation
+  [1mRecommended Actions:[0m
+    [32m1.[0m ≡ƒÜ¿ URGENT: Contact patient within 24 hours
+    [32m2.[0m Mental Health: Urgent psychiatric review; suicide risk assessment
+    [32m3.[0m Hypertension: Medication review; home BP monitoring
+    [32m4.[0m Respiratory: Arrange pulse oximetry; consider supplemental O2
+    [32m5.[0m Medication: Review adherence to Sertraline 50mg
+
+  [33m[1mΓû╢ Patient P0074[0m[0m  [90mCOPD + Heart Failure ΓÇö FEV1%=26.4% (Very Severe)[0m
+
+[44m[97m ≡ƒñû AGENT [0m[0m  [1mAssess patient P0074 and generate prioritised care actions[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[90m  System: MediCare Follow-Up Agent | GPT-4o-mini | tool_choice=auto[0m
+[90m┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖[0m
+  [90m[Step 1][0m [38;5;208m≡ƒöº Calling:[0m [36m[1mget_patient_data[0m[0m  [90m{"patient_id":"P0074"}[0m
+[90m           Γå│ result received (498 bytes)[0m
+  [90m[Step 2][0m [38;5;208m≡ƒöº Calling:[0m [36m[1mflag_clinical_risk[0m[0m  [90m{"patient_id":"P0074"}[0m
+[90m           Γå│ result received (196 bytes)[0m
+  [90m[Step 3][0m [38;5;208m≡ƒöº Calling:[0m [36m[1mgenerate_care_actions[0m[0m  [90m{"patient_id":"P0074"}[0m
+[90m           Γå│ result received (372 bytes)[0m
+
+  [32m[1mΓ£à Agent completed in[0m[0m 3 steps.
+
+  [1mPatient:[0m  [97mSimran Dhaliwal[0m  [90m|[0m  ID: P0074  [90m|[0m  Age: 70
+  [1mDiagnosis:[0m [36mCOPD, Heart Failure[0m
+  [1mRisk Level:[0m [33m[1m≡ƒƒí MEDIUM[0m[0m  [90m(1 flag)[0m 
+  [1mFlags:[0m
+    [38;5;208mΓÜá[0m  FEV1% 26.4% (<50) ΓÇö severe airflow obstruction
+  [1mRecommended Actions:[0m
+    [32m1.[0m ΓÜá∩╕Å  PRIORITY: Schedule review within 1 week
+    [32m2.[0m COPD: Pulmonology review; consider LAMA/LABA step-up
+    [32m3.[0m Medication: Review adherence to Tiotropium 18mcg, Furosemide 40mg
+
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[35m[1m  ≡ƒôï TASK 5 ΓÇö Missed Appointment Follow-Up[0m[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+
+[44m[97m ≡ƒñû AGENT [0m[0m  [1mIdentify all missed appointment patients and produce a prioritised outreach list[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[90m  System: MediCare Follow-Up Agent | GPT-4o-mini | tool_choice=auto[0m
+[90m┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖┬╖[0m
+  [90m[Step 1][0m [38;5;208m≡ƒöº Calling:[0m [36m[1mget_missed_appointment_patients[0m[0m  [90m{}[0m
+[90m           Γå│ result received (1910 bytes)[0m
+
+  [32m[1mΓ£à Agent completed in[0m[0m 1 step.
+
+  [1mFound 15 patients who missed their last appointment[0m
+
+  [90mAssessing risk for each...[0m
+
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[1m  #   ID      Name                   Age   Risk       Flags  Diagnosis[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+  1   P0041   Tarun Mukherjee        46    [31mHIGH  [0m    4      Hypertension
+[90m              Γå│ Hypertension: Medication review; home BP monitoring[0m
+  2   P0043   Gaurav Dey             69    [31mHIGH  [0m    4      Hypertension, Anemia
+[90m              Γå│ Hypertension: Medication review; home BP monitoring[0m
+  3   P0062   Mary Joseph            35    [31mHIGH  [0m    4      Asthma
+[90m              Γå│ Asthma: Update action plan; step-up inhaler therapy[0m
+  4   P0063   John Fernandez         66    [31mHIGH  [0m    4      Hypertension
+[90m              Γå│ Hypertension: Medication review; home BP monitoring[0m
+  5   P0099   Paramita Chatterjee    70    [31mHIGH  [0m    4      Type 2 Diabetes, Hypertension
+[90m              Γå│ Diabetes: Endocrinology review; consider insulin titration[0m
+  6   P0018   Lakshmi Menon          36    [31mHIGH  [0m    3      Heart Failure
+[90m              Γå│ Heart Failure: Cardiology referral; review Furosemide dosage[0m
+  7   P0036   Vandana Srivastava     71    [31mHIGH  [0m    3      Type 2 Diabetes
+[90m              Γå│ Hypertension: Medication review; home BP monitoring[0m
+  8   P0058   Hina Akhtar            45    [31mHIGH  [0m    3      Heart Failure
+[90m              Γå│ Heart Failure: Cardiology referral; review Furosemide dosage[0m
+  9   P0066   Angela Pereira         37    [31mHIGH  [0m    3      Type 2 Diabetes, CKD
+[90m              Γå│ Diabetes: Endocrinology review; consider insulin titration[0m
+  10  P0076   Parmjit Hundal         61    [31mHIGH  [0m    3      Depression
+[90m              Γå│ Mental Health: Urgent psychiatric review; suicide risk assessment[0m
+  11  P0081   Nandini Rao            63    [31mHIGH  [0m    3      Hypothyroidism
+[90m              Γå│ Thyroid: Titrate Levothyroxine; repeat TSH in 6 weeks[0m
+  12  P0069   Victor Lobo            58    [33mMEDIUM[0m    2      Type 2 Diabetes
+[90m              Γå│ Access: Schedule urgent catch-up appointment[0m
+  13  P0070   Teresa Dias            55    [33mMEDIUM[0m    2      Osteoarthritis
+[90m              Γå│ Access: Schedule urgent catch-up appointment[0m
+  14  P0098   Mrinal Basu            56    [33mMEDIUM[0m    2      Heart Failure
+[90m              Γå│ Heart Failure: Cardiology referral; review Furosemide dosage[0m
+  15  P0031   Harish Bajaj           68    [33mMEDIUM[0m    1      Chronic Kidney Disease
+[90m              Γå│ Adherence: Outreach call to reschedule missed appointment[0m
+
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[35m[1m  ≡ƒôè BONUS ΓÇö Batch Risk Dashboard (All 100 Patients)[0m[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+[1m
+  Risk Level Distribution:[0m
+  [31m[1m≡ƒö┤ HIGH  [0m[0m  [31mΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê          [0m [1m 31[0m patients  (31%)
+  [33m[1m≡ƒƒí MEDIUM[0m[0m  [33mΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûêΓûê[0m [1m 63[0m patients  (63%)
+  [32m[1m≡ƒƒó LOW   [0m[0m  [32mΓûêΓûêΓûê                       [0m [1m  6[0m patients  (6%)
+[1m
+  ≡ƒÜ¿ Top 10 Highest-Risk Patients:[0m
+[90mΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ[0m
+  [90m1.[0m [97m[1mMohammed Khan         [0m[0m P0021  [31mHIGH   [0m  4 flags  [90mHypertension[0m
+  [90m2.[0m [97m[1mTarun Mukherjee       [0m[0m P0041  [31mHIGH   [0m  4 flags  [90mHypertension[0m
+  [90m3.[0m [97m[1mGaurav Dey            [0m[0m P0043  [31mHIGH   [0m  4 flags  [90mHypertension, Anemia[0m
+  [90m4.[0m [97m[1mMary Joseph           [0m[0m P0062  [31mHIGH   [0m  4 flags  [90mAsthma[0m
+  [90m5.[0m [97m[1mJohn Fernandez        [0m[0m P0063  [31mHIGH   [0m  4 flags  [90mHypertension[0m
+  [90m6.[0m [97m[1mBalwinder Sidhu       [0m[0m P0077  [31mHIGH   [0m  4 flags  [90mType 2 Diabetes, Hypertensio[0m
+  [90m7.[0m [97m[1mAkash Jain            [0m[0m P0087  [31mHIGH   [0m  4 flags  [90mHypothyroidism[0m
+  [90m8.[0m [97m[1mParamita Chatterjee   [0m[0m P0099  [31mHIGH   [0m  4 flags  [90mType 2 Diabetes, Hypertensio[0m
+  [90m9.[0m [97m[1mAarav Sharma          [0m[0m P0001  [31mHIGH   [0m  3 flags  [90mType 2 Diabetes[0m
+  [90m10.[0m [97m[1mSunita Rao            [0m[0m P0006  [31mHIGH   [0m  3 flags  [90mChronic Kidney Disease[0m
+
+[90mΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ[0m
+[36m[1m  Γ£à  DEMO COMPLETE[0m[0m
+[90mΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ[0m
+  [1mAgent Architecture:[0m  ReAct-style loop | GPT-4o-mini | OpenAI Function Calling
+  [1mTools executed:[0m      get_patient_data ┬╖ flag_clinical_risk ┬╖ generate_care_actions ┬╖ get_missed_appointment_patients
+  [1mPatients analysed:[0m   100 total  |  31 HIGH risk  |  63 MEDIUM risk  |  6 LOW risk
+  [1mRepo:[0m                https://github.com/sharmila2719/MediCare-FollowUp-Agent
+[90mΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ[0m
+
+
