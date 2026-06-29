@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" width="900" height="1100">
+  <defs>
+    <style>
+      .bg{fill:#0d1117} .box{fill:#161b22;stroke:#30363d;stroke-width:1.5;rx:8}
+      .box-blue{fill:#1f2d3d;stroke:#1f6feb;stroke-width:1.5}
+      .box-green{fill:#1a3320;stroke:#238636;stroke-width:1.5}
+      .box-orange{fill:#2d1f0e;stroke:#9e6a03;stroke-width:1.5}
+      .box-red{fill:#2d0f0f;stroke:#b62324;stroke-width:1.5}
+      .box-purple{fill:#1e1532;stroke:#6e40c9;stroke-width:1.5}
+      .title{font:bold 18px monospace;fill:#58a6ff}
+      .subtitle{font:12px monospace;fill:#8b949e}
+      .section-title{font:bold 13px monospace;fill:#ffa657}
+      .label{font:bold 11px monospace;fill:#79c0ff}
+      .text{font:10px monospace;fill:#e6edf3}
+      .small{font:9px monospace;fill:#8b949e}
+      .green{fill:#56d364} .blue{fill:#58a6ff} .orange{fill:#f0883e}
+      .purple{fill:#d2a8ff} .white{fill:#e6edf3}
+      .arrow{stroke:#58a6ff;stroke-width:2;fill:none;marker-end:url(#arr)}
+      .arrow-orange{stroke:#f0883e;stroke-width:1.5;fill:none;marker-end:url(#arr-o)}
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#58a6ff"/>
+    </marker>
+    <marker id="arr-o" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#f0883e"/>
+    </marker>
+  </defs>
+  <!-- Background -->
+  <rect width="900" height="1100" class="bg"/>
+
+  <!-- ── TITLE ── -->
+  <rect x="20" y="15" width="860" height="60" rx="8" class="box"/>
+  <text x="450" y="44" text-anchor="middle" class="title">&#x1F3E5; MediCare Patient Follow-Up Agent</text>
+  <text x="450" y="64" text-anchor="middle" class="subtitle">Agentic AI Architecture  |  ReAct-Style Tool-Chaining Loop  |  GPT-4o-mini + OpenAI Function Calling</text>
+
+  <!-- ── ROW 1: INPUT + DATA LAYER ── -->
+  <!-- Input Box -->
+  <rect x="20" y="95" width="190" height="100" rx="8" class="box-blue"/>
+  <text x="115" y="116" text-anchor="middle" class="label">&#x1F4E5; INPUT</text>
+  <text x="115" y="134" text-anchor="middle" class="text">User Clinical Prompt</text>
+  <text x="115" y="151" text-anchor="middle" class="small">"Assess patient P0008"</text>
+  <text x="115" y="167" text-anchor="middle" class="small">"Find missed appointments"</text>
+  <text x="115" y="184" text-anchor="middle" class="small">"Batch risk all patients"</text>
+
+  <!-- Data Layer Box -->
+  <rect x="225" y="95" width="655" height="100" rx="8" class="box"/>
+  <text x="552" y="116" text-anchor="middle" class="section-title">&#x1F5C4; DATA LAYER — patient_data.csv (100 anonymised patient records)</text>
+  <!-- Data columns -->
+  <rect x="235" y="123" width="95" height="62" rx="4" class="box-blue"/>
+  <text x="282" y="140" text-anchor="middle" style="font:bold 9px monospace;fill:#f0883e">patient_id</text>
+  <text x="282" y="156" text-anchor="middle" class="small">P0001–P0100</text>
+  <text x="282" y="171" text-anchor="middle" class="small">Unique ID</text>
+
+  <rect x="340" y="123" width="95" height="62" rx="4" class="box-blue"/>
+  <text x="387" y="140" text-anchor="middle" style="font:bold 9px monospace;fill:#f0883e">diagnosis</text>
+  <text x="387" y="156" text-anchor="middle" class="small">Diabetes/HF</text>
+  <text x="387" y="171" text-anchor="middle" class="small">COPD/CKD…</text>
+
+  <rect x="445" y="123" width="95" height="62" rx="4" class="box-blue"/>
+  <text x="492" y="140" text-anchor="middle" style="font:bold 9px monospace;fill:#f0883e">lab_test</text>
+  <text x="492" y="156" text-anchor="middle" class="small">HbA1c/BNP</text>
+  <text x="492" y="171" text-anchor="middle" class="small">eGFR/FEV1%</text>
+
+  <rect x="550" y="123" width="95" height="62" rx="4" class="box-blue"/>
+  <text x="597" y="140" text-anchor="middle" style="font:bold 9px monospace;fill:#f0883e">vitals</text>
+  <text x="597" y="156" text-anchor="middle" class="small">BP/SpO2</text>
+  <text x="597" y="171" text-anchor="middle" class="small">Heart Rate</text>
+
+  <rect x="655" y="123" width="100" height="62" rx="4" class="box-blue"/>
+  <text x="705" y="140" text-anchor="middle" style="font:bold 9px monospace;fill:#f0883e">days_since</text>
+  <text x="705" y="156" text-anchor="middle" class="small">Visit gap</text>
+  <text x="705" y="171" text-anchor="middle" class="small">65–360 days</text>
+
+  <rect x="765" y="123" width="105" height="62" rx="4" class="box-blue"/>
+  <text x="817" y="140" text-anchor="middle" style="font:bold 9px monospace;fill:#f0883e">missed_appt</text>
+  <text x="817" y="156" text-anchor="middle" class="small">Yes / No</text>
+  <text x="817" y="171" text-anchor="middle" class="small">20 missed</text>
+
+  <!-- Arrows row1 → loop -->
+  <line x1="115" y1="195" x2="115" y2="218" class="arrow"/>
+  <line x1="552" y1="195" x2="552" y2="218" class="arrow"/>
+
+  <!-- ── AGENTIC LOOP ── -->
+  <rect x="20" y="220" width="860" height="185" rx="8" class="box"/>
+  <text x="450" y="242" text-anchor="middle" class="section-title">&#x1F504; AGENTIC LOOP — run_agent()  |  Max 12 iterations (safety cap)</text>
+
+  <!-- LLM Box -->
+  <rect x="35" y="252" width="310" height="135" rx="8" class="box-blue"/>
+  <text x="190" y="272" text-anchor="middle" style="font:bold 12px monospace;fill:#79c0ff">&#x1F916; LLM — GPT-4o-mini</text>
+  <text x="190" y="291" text-anchor="middle" class="text">OpenAI Chat Completions API</text>
+  <text x="190" y="309" text-anchor="middle" style="font:10px monospace;fill:#f0883e">tool_choice = "auto"</text>
+  <text x="190" y="327" text-anchor="middle" class="small">Decides WHICH tools to call</text>
+  <text x="190" y="344" text-anchor="middle" class="small">and in what order autonomously</text>
+  <text x="190" y="361" text-anchor="middle" class="small">No hardcoded routing logic</text>
+  <text x="190" y="378" text-anchor="middle" class="small">System prompt drives clinical context</text>
+
+  <!-- Tool Dispatcher Box -->
+  <rect x="390" y="252" width="260" height="135" rx="8" class="box-purple"/>
+  <text x="520" y="272" text-anchor="middle" style="font:bold 12px monospace;fill:#d2a8ff">&#x2699; Tool Dispatcher</text>
+  <text x="520" y="291" text-anchor="middle" style="font:10px monospace;fill:#f0883e">TOOL_MAP { }</text>
+  <text x="520" y="309" text-anchor="middle" class="text">Maps LLM function names</text>
+  <text x="520" y="327" text-anchor="middle" class="text">&#x2192; Python implementations</text>
+  <text x="520" y="345" text-anchor="middle" class="small">Executes tool, returns JSON</text>
+  <text x="520" y="363" text-anchor="middle" class="small">Result appended to messages[]</text>
+  <text x="520" y="381" text-anchor="middle" class="small">Fed back to LLM next iteration</text>
+
+  <!-- Final Response Box -->
+  <rect x="700" y="252" width="165" height="135" rx="8" class="box-green"/>
+  <text x="782" y="272" text-anchor="middle" style="font:bold 11px monospace;fill:#56d364">&#x2705; Final Response</text>
+  <text x="782" y="291" text-anchor="middle" class="small">When LLM returns</text>
+  <text x="782" y="308" text-anchor="middle" class="small">no tool_calls</text>
+  <text x="782" y="325" text-anchor="middle" class="small">Narrative output</text>
+  <text x="782" y="342" text-anchor="middle" class="small">for care team</text>
+  <text x="782" y="359" text-anchor="middle" class="small">Risk + Flags +</text>
+  <text x="782" y="376" text-anchor="middle" class="small">Action Plan</text>
+
+  <!-- Arrows in loop -->
+  <line x1="345" y1="319" x2="390" y2="319" class="arrow"/>
+  <text x="367" y="313" text-anchor="middle" style="font:8px monospace;fill:#58a6ff">tool_call</text>
+  <line x1="650" y1="319" x2="700" y2="319" class="arrow"/>
+  <text x="674" y="313" text-anchor="middle" style="font:8px monospace;fill:#56d364">done</text>
+  <!-- Tool result feedback arc -->
+  <path d="M520,387 Q520,415 380,415 Q240,415 190,405" stroke="#f0883e" stroke-width="1.5" fill="none" marker-end="url(#arr-o)"/>
+  <text x="355" y="428" text-anchor="middle" style="font:8px monospace;fill:#f0883e">tool result &#x2192; messages[] &#x2192; LLM</text>
+
+  <!-- Down arrow to tools -->
+  <line x1="450" y1="405" x2="450" y2="448" class="arrow"/>
+
+  <!-- ── TOOL LAYER ── -->
+  <rect x="20" y="450" width="860" height="210" rx="8" class="box"/>
+  <text x="450" y="472" text-anchor="middle" class="section-title">&#x1F6E0; TOOL LAYER — 4 Tools (OpenAI Function-Calling Schemas)</text>
+
+  <!-- Tool 1 -->
+  <rect x="32" y="482" width="198" height="165" rx="6" class="box-blue"/>
+  <text x="131" y="502" text-anchor="middle" style="font:bold 10px monospace;fill:#79c0ff">get_patient_data</text>
+  <text x="131" y="520" text-anchor="middle" style="font:9px monospace;fill:#f0883e">Input: patient_id</text>
+  <text x="131" y="537" text-anchor="middle" class="small">Output: full patient</text>
+  <text x="131" y="553" text-anchor="middle" class="small">record dict from CSV</text>
+  <text x="131" y="570" text-anchor="middle" class="small">&#x2190; always called first</text>
+  <text x="131" y="587" text-anchor="middle" class="small">Provides context for</text>
+  <text x="131" y="604" text-anchor="middle" class="small">all other tools</text>
+  <text x="131" y="635" text-anchor="middle" style="font:8px monospace;fill:#56d364">&#x1F511; Tool 1</text>
+
+  <!-- Tool 2 -->
+  <rect x="242" y="482" width="198" height="165" rx="6" class="box-blue"/>
+  <text x="341" y="502" text-anchor="middle" style="font:bold 10px monospace;fill:#79c0ff">flag_clinical_risk</text>
+  <text x="341" y="520" text-anchor="middle" style="font:9px monospace;fill:#f0883e">10 threshold checks:</text>
+  <text x="341" y="537" text-anchor="middle" class="small">HbA1c&gt;8% | BNP&gt;400</text>
+  <text x="341" y="553" text-anchor="middle" class="small">eGFR&lt;45 | Hb&lt;10 g/dL</text>
+  <text x="341" y="569" text-anchor="middle" class="small">FEV1%&lt;50 | PHQ-9&gt;14</text>
+  <text x="341" y="585" text-anchor="middle" class="small">TSH&gt;6 | BP&#x2265;160mmHg</text>
+  <text x="341" y="601" text-anchor="middle" class="small">SpO2&lt;94% | Days&gt;180</text>
+  <text x="341" y="620" text-anchor="middle" style="font:9px monospace;fill:#ffa657">&#x2192; LOW / MEDIUM / HIGH</text>
+  <text x="341" y="635" text-anchor="middle" style="font:8px monospace;fill:#56d364">&#x1F511; Tool 2</text>
+
+  <!-- Tool 3 -->
+  <rect x="452" y="482" width="198" height="165" rx="6" class="box-blue"/>
+  <text x="551" y="502" text-anchor="middle" style="font:bold 10px monospace;fill:#79c0ff">generate_care_actions</text>
+  <text x="551" y="520" text-anchor="middle" style="font:9px monospace;fill:#f0883e">Maps flags &#x2192; actions:</text>
+  <text x="551" y="537" text-anchor="middle" class="small">&#x2022; Cardiology referral</text>
+  <text x="551" y="553" text-anchor="middle" class="small">&#x2022; Insulin titration</text>
+  <text x="551" y="569" text-anchor="middle" class="small">&#x2022; Psychiatric review</text>
+  <text x="551" y="585" text-anchor="middle" class="small">&#x2022; Nephrology referral</text>
+  <text x="551" y="601" text-anchor="middle" class="small">&#x2022; Outreach call</text>
+  <text x="551" y="617" text-anchor="middle" class="small">+ urgency header</text>
+  <text x="551" y="635" text-anchor="middle" style="font:8px monospace;fill:#56d364">&#x1F511; Tool 3</text>
+
+  <!-- Tool 4 -->
+  <rect x="662" y="482" width="202" height="165" rx="6" class="box-blue"/>
+  <text x="763" y="502" text-anchor="middle" style="font:bold 10px monospace;fill:#79c0ff">get_missed_appt</text>
+  <text x="763" y="519" text-anchor="middle" style="font:bold 10px monospace;fill:#79c0ff">_patients</text>
+  <text x="763" y="538" text-anchor="middle" style="font:9px monospace;fill:#f0883e">Input: none</text>
+  <text x="763" y="555" text-anchor="middle" class="small">Output: list of all</text>
+  <text x="763" y="571" text-anchor="middle" class="small">patients where</text>
+  <text x="763" y="587" text-anchor="middle" class="small">missed_appt = Yes</text>
+  <text x="763" y="603" text-anchor="middle" class="small">Used in Task 5</text>
+  <text x="763" y="619" text-anchor="middle" class="small">batch workflow</text>
+  <text x="763" y="635" text-anchor="middle" style="font:8px monospace;fill:#56d364">&#x1F511; Tool 4</text>
+
+  <!-- Down arrow -->
+  <line x1="450" y1="660" x2="450" y2="690" class="arrow"/>
+
+  <!-- ── RISK STRATIFICATION ── -->
+  <rect x="20" y="692" width="860" height="110" rx="8" class="box"/>
+  <text x="450" y="714" text-anchor="middle" class="section-title">&#x2696; RISK STRATIFICATION ENGINE</text>
+
+  <rect x="35" y="723" width="260" height="68" rx="6" style="fill:#0d3320;stroke:#238636;stroke-width:1.5"/>
+  <text x="165" y="745" text-anchor="middle" style="font:bold 13px monospace;fill:#56d364">&#x1F7E2; LOW RISK</text>
+  <text x="165" y="763" text-anchor="middle" style="font:10px monospace;fill:#e6edf3">flag_count = 0</text>
+  <text x="165" y="781" text-anchor="middle" class="small">Routine follow-up at next visit</text>
+
+  <rect x="320" y="723" width="260" height="68" rx="6" style="fill:#2d1f0e;stroke:#9e6a03;stroke-width:1.5"/>
+  <text x="450" y="745" text-anchor="middle" style="font:bold 13px monospace;fill:#ffa657">&#x1F7E1; MEDIUM RISK</text>
+  <text x="450" y="763" text-anchor="middle" style="font:10px monospace;fill:#e6edf3">flag_count = 1 or 2</text>
+  <text x="450" y="781" text-anchor="middle" class="small">Priority review within 1 week</text>
+
+  <rect x="605" y="723" width="260" height="68" rx="6" style="fill:#2d0f0f;stroke:#b62324;stroke-width:1.5"/>
+  <text x="735" y="745" text-anchor="middle" style="font:bold 13px monospace;fill:#ff7b72">&#x1F534; HIGH RISK</text>
+  <text x="735" y="763" text-anchor="middle" style="font:10px monospace;fill:#e6edf3">flag_count &#x2265; 3</text>
+  <text x="735" y="781" text-anchor="middle" class="small">Urgent contact within 24 hours</text>
+
+  <!-- Down arrow -->
+  <line x1="450" y1="802" x2="450" y2="830" class="arrow"/>
+
+  <!-- ── TASK WORKFLOWS ── -->
+  <rect x="20" y="832" width="860" height="170" rx="8" class="box"/>
+  <text x="450" y="854" text-anchor="middle" class="section-title">&#x1F4CB; TASK WORKFLOWS</text>
+
+  <!-- Task 4 -->
+  <rect x="32" y="862" width="400" height="128" rx="6" style="fill:#1a2332;stroke:#1f6feb;stroke-width:1"/>
+  <text x="232" y="882" text-anchor="middle" style="font:bold 11px monospace;fill:#79c0ff">Task 4 — Single Patient Analysis</text>
+  <rect x="45"  y="892" width="88" height="32" rx="4" style="fill:#1f6feb;fill-opacity:0.4;stroke:#1f6feb"/>
+  <text x="89"  y="913" text-anchor="middle" style="font:8px monospace;fill:white">get_patient</text>
+  <text x="89"  y="924" text-anchor="middle" style="font:8px monospace;fill:white">_data</text>
+  <line x1="133" y1="908" x2="148" y2="908" class="arrow"/>
+  <rect x="148" y="892" width="88" height="32" rx="4" style="fill:#388bfd;fill-opacity:0.4;stroke:#388bfd"/>
+  <text x="192" y="913" text-anchor="middle" style="font:8px monospace;fill:white">flag_clinical</text>
+  <text x="192" y="924" text-anchor="middle" style="font:8px monospace;fill:white">_risk</text>
+  <line x1="236" y1="908" x2="251" y2="908" class="arrow"/>
+  <rect x="251" y="892" width="88" height="32" rx="4" style="fill:#1f6feb;fill-opacity:0.4;stroke:#1f6feb"/>
+  <text x="295" y="913" text-anchor="middle" style="font:8px monospace;fill:white">generate</text>
+  <text x="295" y="924" text-anchor="middle" style="font:8px monospace;fill:white">_care_actions</text>
+  <line x1="339" y1="908" x2="354" y2="908" class="arrow"/>
+  <rect x="354" y="892" width="68" height="32" rx="4" style="fill:#238636;fill-opacity:0.5;stroke:#56d364"/>
+  <text x="388" y="913" text-anchor="middle" style="font:8px monospace;fill:#56d364">LLM</text>
+  <text x="388" y="924" text-anchor="middle" style="font:8px monospace;fill:#56d364">Summary</text>
+  <text x="232" y="955" text-anchor="middle" class="small">Examples: P0008 (BNP=1100), P0028 (PHQ-9=26.6), P0074 (COPD+HF)</text>
+  <text x="232" y="972" text-anchor="middle" class="small">Agent autonomously chains all 3 tools before summarising</text>
+
+  <!-- Task 5 -->
+  <rect x="448" y="862" width="420" height="128" rx="6" style="fill:#1a2332;stroke:#1f6feb;stroke-width:1"/>
+  <text x="658" y="882" text-anchor="middle" style="font:bold 11px monospace;fill:#79c0ff">Task 5 — Missed Appointment Batch Follow-Up</text>
+  <text x="658" y="902" text-anchor="middle" style="font:9px monospace;fill:#f0883e">get_missed_appointment_patients</text>
+  <text x="658" y="920" text-anchor="middle" class="small">&#x2193; flag_clinical_risk (called for each missed patient)</text>
+  <text x="658" y="937" text-anchor="middle" class="small">&#x2193; LLM sorts by risk level: HIGH &#x2192; MEDIUM &#x2192; LOW</text>
+  <text x="658" y="955" text-anchor="middle" style="font:9px monospace;fill:#56d364">&#x2192; Prioritised Outreach List (20 patients)</text>
+  <text x="658" y="972" text-anchor="middle" class="small">Name | Diagnosis | Risk | Top 2 Actions</text>
+
+  <!-- Down arrow -->
+  <line x1="450" y1="1002" x2="450" y2="1030" class="arrow"/>
+
+  <!-- ── OUTPUT ── -->
+  <rect x="20" y="1032" width="860" height="55" rx="8" class="box-green"/>
+  <text x="450" y="1052" text-anchor="middle" style="font:bold 12px monospace;fill:#56d364">&#x1F4E4; OUTPUT</text>
+  <rect x="32"  y="1058" width="128" height="22" rx="4" style="fill:#238636;fill-opacity:0.3"/>
+  <text x="96"  y="1074" text-anchor="middle" style="font:8px monospace;fill:#e6edf3">Risk Level + Flags</text>
+  <rect x="170" y="1058" width="128" height="22" rx="4" style="fill:#238636;fill-opacity:0.3"/>
+  <text x="234" y="1074" text-anchor="middle" style="font:8px monospace;fill:#e6edf3">Care Action Plan</text>
+  <rect x="308" y="1058" width="148" height="22" rx="4" style="fill:#238636;fill-opacity:0.3"/>
+  <text x="382" y="1074" text-anchor="middle" style="font:8px monospace;fill:#e6edf3">Outreach Priority List</text>
+  <rect x="466" y="1058" width="128" height="22" rx="4" style="fill:#238636;fill-opacity:0.3"/>
+  <text x="530" y="1074" text-anchor="middle" style="font:8px monospace;fill:#e6edf3">EDA Dashboard</text>
+  <rect x="604" y="1058" width="148" height="22" rx="4" style="fill:#238636;fill-opacity:0.3"/>
+  <text x="678" y="1074" text-anchor="middle" style="font:8px monospace;fill:#e6edf3">Batch Risk Dashboard</text>
+  <rect x="762" y="1058" width="106" height="22" rx="4" style="fill:#238636;fill-opacity:0.3"/>
+  <text x="815" y="1074" text-anchor="middle" style="font:8px monospace;fill:#e6edf3">Top-15 Patients</text>
+</svg>

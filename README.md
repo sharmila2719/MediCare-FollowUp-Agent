@@ -25,30 +25,58 @@ An AI agent that autonomously orchestrates tool calls to analyse 100 chronic dis
 
 ---
 
-## 🤖 Agent Architecture
+## 🏗️ Architecture Diagram
 
-```
-User Prompt
-    │
-    ▼
-┌──────────────────────────┐
-│  LLM (GPT-4o-mini)       │  ← decides which tools to call
-│  OpenAI Function Calling │
-└────────────┬─────────────┘
-             │ tool_call
-             ▼
-┌──────────────────────────┐
-│  Tool Dispatcher         │
-│  ├─ get_patient_data     │
-│  ├─ flag_clinical_risk   │  ← loops until no more tool calls
-│  ├─ generate_care_actions│
-│  └─ get_missed_patients  │
-└────────────┬─────────────┘
-             │ tool result
-             ▼
-┌──────────────────────────┐
-│  Final narrative response│
-└──────────────────────────┘
+![Architecture Diagram](architecture_diagram.svg)
+
+---
+
+## 🤖 Agent Architecture (Flow)
+
+```mermaid
+flowchart TD
+    A([👤 User Clinical Prompt]) --> B
+
+    subgraph DATA["🗄️ DATA LAYER"]
+        D[(patient_data.csv\n100 patient records\nDiagnosis · Labs · Vitals · Visits)]
+    end
+
+    subgraph LOOP["🔄 AGENTIC LOOP — run_agent()"]
+        B[🤖 LLM — GPT-4o-mini\nOpenAI Function Calling\ntool_choice = auto] -->|tool_call| C[⚙️ Tool Dispatcher\nTOOL_MAP]
+        C -->|tool result → messages| B
+        B -->|no more tool calls| F([✅ Final Narrative Response])
+    end
+
+    subgraph TOOLS["🛠️ TOOL LAYER"]
+        T1["get_patient_data\nFetch full record by ID"]
+        T2["flag_clinical_risk\nEvaluate 10 thresholds\n→ LOW / MEDIUM / HIGH"]
+        T3["generate_care_actions\nMap flags → clinical actions"]
+        T4["get_missed_appointment_patients\nBatch query missed appts"]
+    end
+
+    subgraph RISK["⚖️ RISK STRATIFICATION"]
+        R1["🟢 LOW\n0 flags\nRoutine follow-up"]
+        R2["🟡 MEDIUM\n1–2 flags\nReview within 1 week"]
+        R3["🔴 HIGH\n≥3 flags\nUrgent contact 24h"]
+    end
+
+    D --> B
+    C --> T1 & T2 & T3 & T4
+    T2 --> R1 & R2 & R3
+    F --> OUT
+
+    subgraph OUT["📤 OUTPUT"]
+        O1[Risk Level + Flags]
+        O2[Prioritised Care Actions]
+        O3[Missed Appt Outreach List]
+        O4[EDA + Risk Dashboards]
+    end
+
+    style LOOP fill:#161b22,stroke:#30363d,color:#e6edf3
+    style TOOLS fill:#161b22,stroke:#30363d,color:#e6edf3
+    style DATA  fill:#161b22,stroke:#30363d,color:#e6edf3
+    style RISK  fill:#161b22,stroke:#30363d,color:#e6edf3
+    style OUT   fill:#1a3320,stroke:#238636,color:#e6edf3
 ```
 
 ---
